@@ -15,6 +15,9 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+   raise TriangleError, "I find your triangle's lack of length disturbing." if (a <= 0) || (b <= 0) || (c <= 0)
+   raise TriangleError, "Stop thinking in portals." if a+b <= c || a+c <= b || b+c <= a	
+
   case 
   when a == b && a == c
 	  return :equilateral
